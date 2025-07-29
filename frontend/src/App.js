@@ -17,13 +17,17 @@ function App() {
     setIsBookingModalOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="App">
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <div className="logo-image-container">
+            <div className="logo-image-container" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
               <img src="/sessions.png" alt="SESSIONS" className="logo-image" />
             </div>
           </div>
@@ -135,49 +139,37 @@ function App() {
           <div className="live-grid">
             <div className="live-card">
               <div className="live-date">
-                <span className="date-day">15</span>
-                <span className="date-month">DEC</span>
+                <span className="date-day">12</span>
+                <span className="date-month">SEP</span>
               </div>
               <div className="live-info">
-                <h3>Atlanta, GA</h3>
-                <p className="venue">Terminal West</p>
+                <h3>Birmingham, AL</h3>
+                <p className="venue">Iron City</p>
                 <p className="time">Doors: 8:00 PM</p>
                 <button className="btn btn-secondary">Get Tickets</button>
               </div>
             </div>
             <div className="live-card">
               <div className="live-date">
-                <span className="date-day">22</span>
-                <span className="date-month">DEC</span>
+                <span className="date-day">13</span>
+                <span className="date-month">SEP</span>
               </div>
               <div className="live-info">
-                <h3>Nashville, TN</h3>
-                <p className="venue">The Basement East</p>
+                <h3>Huntsville, AL</h3>
+                <p className="venue">Mars Music Hall</p>
                 <p className="time">Doors: 9:00 PM</p>
                 <button className="btn btn-secondary">Get Tickets</button>
               </div>
             </div>
             <div className="live-card">
               <div className="live-date">
-                <span className="date-day">05</span>
-                <span className="date-month">JAN</span>
+                <span className="date-day">31</span>
+                <span className="date-month">DEC</span>
               </div>
               <div className="live-info">
                 <h3>Charlotte, NC</h3>
                 <p className="venue">The Underground</p>
                 <p className="time">Doors: 8:30 PM</p>
-                <button className="btn btn-secondary">Get Tickets</button>
-              </div>
-            </div>
-            <div className="live-card">
-              <div className="live-date">
-                <span className="date-day">12</span>
-                <span className="date-month">JAN</span>
-              </div>
-              <div className="live-info">
-                <h3>Raleigh, NC</h3>
-                <p className="venue">Lincoln Theatre</p>
-                <p className="time">Doors: 8:00 PM</p>
                 <button className="btn btn-secondary">Get Tickets</button>
               </div>
             </div>
