@@ -3,9 +3,18 @@ import './App.css';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openBookingModal = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const closeBookingModal = () => {
+    setIsBookingModalOpen(false);
   };
 
   return (
@@ -23,7 +32,7 @@ function App() {
             <a href="#music" className="nav-link">Music</a>
             <a href="#about" className="nav-link">About</a>
             <a href="#live" className="nav-link">Live</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="#press" className="nav-link">Press</a>
           </div>
           <div className="nav-toggle" onClick={toggleMenu}>
             <span className="bar"></span>
@@ -39,7 +48,7 @@ function App() {
           <div className="hero-logo">
             <img src="/sessions.png" alt="SESSIONS" className="hero-logo-image" />
           </div>
-          <p className="hero-subtitle">Musician • Producer • Artist</p>
+          <p className="hero-subtitle">Producer • Artist • Musician</p>
           <div className="hero-buttons">
             <button className="btn btn-primary">Listen Now</button>
             <button className="btn btn-secondary">Latest Release</button>
@@ -59,9 +68,10 @@ function App() {
                 <div className="music-logo-overlay">
                   <img src="/sessions_small.png" alt="SESSIONS" className="music-logo" />
                 </div>
+                <img src="/images/7.jpg" alt="Berlin (To You) Artwork" className="music-album-art" />
               </div>
-              <h3>Latest Single</h3>
-              <p>Released 2024</p>
+              <h3>Berlin (To You)</h3>
+              <p>Anjunadeep</p>
             </div>
             <div className="music-card">
               <div className="music-image">
@@ -69,9 +79,10 @@ function App() {
                 <div className="music-logo-overlay">
                   <img src="/sessions_small.png" alt="SESSIONS" className="music-logo" />
                 </div>
+                <img src="/images/5.PNG" alt="Album Artwork" className="music-album-art" />
               </div>
-              <h3>Album Title</h3>
-              <p>Released 2023</p>
+              <h3>Do It To Myself</h3>
+              <p>Spinnin' Deep</p>
             </div>
             <div className="music-card">
               <div className="music-image">
@@ -79,9 +90,10 @@ function App() {
                 <div className="music-logo-overlay">
                   <img src="/sessions_small.png" alt="SESSIONS" className="music-logo" />
                 </div>
+                <img src="/images/6.jpg" alt="Translucent Artwork" className="music-album-art" />
               </div>
-              <h3>Featured Track</h3>
-              <p>Released 2024</p>
+              <h3>Translucent</h3>
+              <p>Aero Records</p>
             </div>
           </div>
         </div>
@@ -109,7 +121,7 @@ function App() {
             </div>
             <div className="about-image">
               <div className="image-placeholder">
-                <img src="/sessions_small.png" alt="SESSIONS" className="about-logo" />
+                <img src="/images/1.JPEG" alt="Sessions Artist Photo" className="about-photo" />
               </div>
             </div>
           </div>
@@ -173,33 +185,144 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="contact-section">
+      {/* Press Section */}
+      <section id="press" className="press-section">
         <div className="container">
-          <h2 className="section-title">Get In Touch</h2>
-          <div className="contact-content">
-            <div className="contact-info">
-              <h3>Connect</h3>
-              <p>Email: contact@sessions.com</p>
-              <p>Instagram: @sessions</p>
-              <p>Twitter: @sessions</p>
+          <h2 className="section-title">Press</h2>
+          <div className="press-grid">
+            <div className="press-card">
+              <div className="press-logo">
+                <img src="/sessions_small.png" alt="Publication" className="press-logo-img" />
+              </div>
+              <div className="press-content">
+                <h3>"Sessions Brings Berlin Vibes to Atlanta"</h3>
+                <p className="press-source">Electronic Music Monthly</p>
+                <p className="press-excerpt">
+                  "Bailey Van Wormer's new project Sessions delivers exactly what the U.S. electronic scene 
+                  has been missing - the laid-back energy of Berlin's melodic house scene with a distinctly 
+                  American soul."
+                </p>
+                <a href="#" className="press-link">Read Full Article →</a>
+              </div>
             </div>
-            <form className="contact-form">
-              <input type="text" placeholder="Name" className="form-input" />
-              <input type="email" placeholder="Email" className="form-input" />
-              <textarea placeholder="Message" className="form-textarea"></textarea>
-              <button type="submit" className="btn btn-primary">Send Message</button>
-            </form>
+            <div className="press-card">
+              <div className="press-logo">
+                <img src="/sessions_small.png" alt="Publication" className="press-logo-img" />
+              </div>
+              <div className="press-content">
+                <h3>"From Future House Cloud to Sessions: A Producer's Evolution"</h3>
+                <p className="press-source">DJ Times</p>
+                <p className="press-excerpt">
+                  "At just 22, Sessions has already proven his ability to craft tracks that resonate with 
+                  international audiences, bridging the gap between American and European electronic music cultures."
+                </p>
+                <a href="#" className="press-link">Read Full Article →</a>
+              </div>
+            </div>
+            <div className="press-card">
+              <div className="press-logo">
+                <img src="/sessions_small.png" alt="Publication" className="press-logo-img" />
+              </div>
+              <div className="press-content">
+                <h3>"Sessions: The New Face of Chill Electronic"</h3>
+                <p className="press-source">Atlanta Music Scene</p>
+                <p className="press-excerpt">
+                  "Local producer Bailey Van Wormer's Sessions project is setting the standard for ambient 
+                  electronic music that moves both the mind and the dance floor."
+                </p>
+                <a href="#" className="press-link">Read Full Article →</a>
+              </div>
+            </div>
+            <div className="press-card">
+              <div className="press-logo">
+                <img src="/sessions_small.png" alt="Publication" className="press-logo-img" />
+              </div>
+              <div className="press-content">
+                <h3>"Interview: Sessions on European Dance Scene Ambitions"</h3>
+                <p className="press-source">Electronic Dance Music Weekly</p>
+                <p className="press-excerpt">
+                  "In an exclusive interview, Sessions discusses his journey from teenage producer to touring 
+                  DJ and his plans to conquer the European dance scene."
+                </p>
+                <a href="#" className="press-link">Read Full Article →</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Booking Banner */}
+      <section className="booking-banner">
+        <div className="container">
+          <div className="booking-content">
+            <div className="booking-text">
+              <h2>Get in touch</h2>
+              <p>For bookings, press, or collaborations</p>
+            </div>
+            <button className="btn btn-primary booking-btn" onClick={openBookingModal}>
+              Contact
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Modal */}
+      {isBookingModalOpen && (
+        <div className="modal-overlay" onClick={closeBookingModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeBookingModal}>×</button>
+            <h2 className="modal-title">Booking Request</h2>
+            <form className="booking-form">
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" id="name" name="name" className="form-input" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" name="email" className="form-input" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="venue">Venue/Event Name</label>
+                  <input type="text" id="venue" name="venue" className="form-input" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="date">Event Date</label>
+                  <input type="date" id="date" name="date" className="form-input" required />
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="location">Location (City, State)</label>
+                <input type="text" id="location" name="location" className="form-input" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="details">Event Details</label>
+                <textarea id="details" name="details" className="form-textarea" placeholder="Tell us about your event, expected attendance, genre, etc." rows="4"></textarea>
+              </div>
+              <div className="form-group">
+                <label htmlFor="budget">Budget Range</label>
+                <select id="budget" name="budget" className="form-input">
+                  <option value="">Select budget range</option>
+                  <option value="under-1000">Under $1,000</option>
+                  <option value="1000-2500">$1,000 - $2,500</option>
+                  <option value="2500-5000">$2,500 - $5,000</option>
+                  <option value="5000-plus">$5,000+</option>
+                </select>
+              </div>
+              <button type="submit" className="btn btn-primary submit-btn">Send Booking Request</button>
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
             <img src="/sessions_small.png" alt="SESSIONS" className="footer-logo" />
-            <p>&copy; 2024 SESSIONS. All rights reserved.</p>
+            <p>&copy; 2025 SESSIONS. All rights reserved.</p>
           </div>
         </div>
       </footer>
